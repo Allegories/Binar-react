@@ -7,17 +7,16 @@ const App = ()=> {
   const [count, setCount] = useState(0)
   
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
+    <div className="App pt-2">
+        <p className="text-center" >
           {count}
         </p>
-        <div>
-          <button onClick={()=> setCount(count-1)} >-</button>
-          <button onClick={()=> setCount(count+1)}>+</button>
+        <div className="d-flex justify-content-center">
+          <button className="btn btn-primary px-4 me-4" onClick={()=> setCount(count-1)} >-</button>
+          <button className="btn btn-primary px-4" onClick={()=> setCount(count+1)}>+</button>
         </div>
 
-      </header>
+    
     </div>
   );
 }
