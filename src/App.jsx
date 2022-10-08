@@ -1,22 +1,15 @@
-
-import {useState} from 'react';
-
+import {Routes, Route} from 'react-router-dom';
+import HomePage from './pages/home-page/home-pages';
+import LoginPage from './pages/login-page/login-pages';
 
 
 const App = ()=> {
-  const [count, setCount] = useState(0)
-  
-  return (
-    <div className="App pt-2">
-        <p className="text-center" >
-          {count}
-        </p>
-        <div className="d-flex justify-content-center">
-          <button className="btn btn-primary px-4 me-4" onClick={()=> setCount(count-1)} >-</button>
-          <button className="btn btn-primary px-4" onClick={()=> setCount(count+1)}>+</button>
-        </div>
-
-    
+  return(
+    <div>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+      </Routes>
     </div>
   );
 }
